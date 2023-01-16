@@ -11,7 +11,11 @@ refs.buttonStop.addEventListener("click", offChangeColor);
 
 // дія при кліку старт
 function onChangeColor() {
-	refs.buttonStart.setAttribute("disabled", "disabled");
+	if (!refs.buttonStart.hasAttribute("disabled")) {
+		refs.buttonStart.setAttribute("disabled", "disabled");
+		refs.buttonStop.removeAttribute("disabled");
+	};
+
 	timerID = setInterval(randomColor, 1000);
 	console.log("старт");
 };
@@ -19,9 +23,10 @@ function onChangeColor() {
 // дія при кліку стоп
 function offChangeColor() {
 	
-	if (refs.buttonStart.hasAttribute("disabled")) {
-		refs.buttonStart.removeAttribute("disabled")
-	}
+	if (!refs.buttonStop.hasAttribute("disabled")) {
+		refs.buttonStop.setAttribute("disabled", "disabled");
+		refs.buttonStart.removeAttribute("disabled");
+	};
 
 	clearInterval(timerID);
 	console.log("стоп");
