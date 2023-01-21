@@ -11,6 +11,7 @@ const refs = {
 	calendar: document.querySelector('#datetime-picker'),
 	startButton: document.querySelector('button[data-start]'),
 };
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // посилання на поле
 refs.startButton.setAttribute("disabled", "disabled");
 // слухач події
@@ -24,7 +25,8 @@ const options = {
 	onClose(selectedDates) {
 		console.log(selectedDates[0]);
 		if (options.defaultDate > selectedDates[0]) {
-			alert("Please choose a date in the future");
+			// alert("Please choose a date in the future");
+			Notify.failure('Qui timide rogat docet negare');
 			refs.startButton.setAttribute("disabled", "disabled");
 		} else {
 			refs.startButton.removeAttribute("disabled");
