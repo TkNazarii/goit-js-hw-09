@@ -9,6 +9,8 @@ const refs = {
 refs.buttonStart.addEventListener("click", onChangeColor);
 refs.buttonStop.addEventListener("click", offChangeColor);
 
+let = timerID
+
 // дія при кліку старт
 function onChangeColor() {
 	if (!refs.buttonStart.hasAttribute("disabled")) {
