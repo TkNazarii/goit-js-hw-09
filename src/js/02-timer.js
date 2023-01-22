@@ -18,9 +18,10 @@ const refs = {
 refs.startButton.setAttribute("disabled", "disabled");
 // слухач події
 refs.startButton.addEventListener('click', changeButtonValue);
-// обєкт налаштувань
+// змінна таймера
 let timerID
 
+// обєкт налаштувань
 const options = {
 	enableTime: true,
 	time_24hr: true,
@@ -60,9 +61,7 @@ function foo() {
 			} else {
 				convertMs(ms);
 				addLeadingZero(newObjData);
-			}
-				
-			
+			}	
 	}
 	// функція створення обєктку з годиною
 function convertMs(ms) {
