@@ -10,7 +10,7 @@ refs.buttonStart.addEventListener("click", onChangeColor);
 refs.buttonStop.addEventListener("click", offChangeColor);
 
 // змынна таймера
-let = timerID
+let timerID
 
 // дія при кліку старт
 function onChangeColor() {
